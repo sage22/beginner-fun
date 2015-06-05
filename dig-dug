@@ -1,0 +1,26 @@
+#!/bin/bash
+clear
+
+echo "what wbsite do you want to ping & lookup dns for?"
+read ans
+clear
+
+
+echo "okay, runnig command"
+
+echo "How many times do you want to ping $ans ?"
+read num
+clear
+echo "okay pinging $ans $num numner of times"
+sleep 4
+
+ping -c $num $ans
+
+echo "here are the following dns records for $ans"
+/usr/bin/dig $ans
+
+echo "
+
+
+DONE"
+
