@@ -25,5 +25,8 @@ sleep 5
 watch -n 1 cat /proc/net/wireless
 elif  [ "$full" == half ]
 then
+echo "half scan it is"
+clear
+sleep 3
 watch -n 1 "awk 'NR==3 {print \"WiFi Signal Strength = \" \$3 \"00 %\"}''' /proc/net/wireless"
 fi
